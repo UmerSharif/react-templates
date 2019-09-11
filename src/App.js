@@ -4,7 +4,7 @@ import { useState } from "react";
 import Building from "./components/Building";
 import PackageContext from "./components/PackageContext";
 // import ImageUpload from "./components/ImageUpload";
-import ImageUpload3 from "./components/ImageUpload3";
+import ImageUpload2 from "./components/ImageUpload2";
 
 function App() {
   const [state, setState] = useState({
@@ -31,7 +31,7 @@ function App() {
         <h1>Context and useState</h1>
         <Building></Building>
         <hr />
-        <ImageUpload3 />
+        <ImageUpload2 />
       </div>
     </PackageContext.Provider>
   );
