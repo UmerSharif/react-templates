@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Progress } from "reactstrap";
 import ProgressBar from "react-bootstrap/ProgressBar";
 
 const PRESET_NAME = "zaawjkhe";
@@ -21,7 +20,7 @@ export default function ImageUpload2() {
     setError(error.sizeError);
     return;
   };
-  console.log(Loaded);
+
   const checkFileSize = event => {
     let file = event.target.files[0];
     let fileSize = file.size / 1024 / 1024;
@@ -73,16 +72,15 @@ export default function ImageUpload2() {
 
       <input type="file" onChange={getImage} />
       <button onClick={uploadImage}>Upload Image</button>
-      <div>
-        {/* <div className="text-center">25%</div> */}
+      <div style={{ margin: "2rem auto 2rem auto", width: "52%" }}>
         <ProgressBar
           animated
           now={Math.round(Loaded, 2)}
           label={`${Loaded}%`}
         />
-
-        <img src={ImageUrl} alt="" />
       </div>
+      <img src={ImageUrl} alt="" />
+
       <h1>{fileSizeError}</h1>
     </div>
   );
