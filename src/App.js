@@ -5,6 +5,7 @@ import Building from "./components/Building";
 import PackageContext from "./components/PackageContext";
 // import ImageUpload from "./components/ImageUpload";
 import ImageUpload2 from "./components/ImageUpload2";
+import RollDice from "./components/RollDice";
 
 function App() {
   const [state, setState] = useState({
@@ -28,10 +29,12 @@ function App() {
       }}
     >
       <div className="App">
-        <h1>Context and useState</h1>
+        {/* <h1>Context and useState</h1>
         <Building></Building>
         <hr />
-        <ImageUpload2 />
+        <ImageUpload2 /> */}
+        {/* dice roll game */}
+        <RollDice />
       </div>
     </PackageContext.Provider>
   );
